@@ -1,0 +1,7 @@
+-- Integration notes for AI General III Pancake WH3 latest-version compatibility.
+-- 1) require this module from aigeneral_iii_main.lua via require_pancake_libs("aigeneral_tactical_controller")
+-- 2) instantiate on prebattle: self.tactical_controller = aigeneral_tactical_controller:new(self, self.is_debug)
+-- 3) in active battle callback, gather friendly/enemy script_unit tables and call:
+--    self.tactical_controller:tick(bm:time_elapsed_ms(), friendly_sus, enemy_sus)
+-- 4) keep script_ai_planner as default owner; only invoke tactical layer in selected windows (flank risk, artillery threat, cleanup)
+-- 5) preserve current UI/MCT flags and honor exclusion lists before issuing any order
