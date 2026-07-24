@@ -1,9 +1,16 @@
-# Screening Report Template
+# Screening Report Template (internal working artifact)
 
-Use this structure exactly. The verdict leads — a reader in a hurry gets the
-answer, the confidence, and the one thing that matters most within the first
-three lines. Never delete a section: when one is empty, write "none found" in
-it, so absence reads as checked-and-clear instead of unchecked.
+This full report is the audit trail behind the screen — build it so every
+line of the user-facing summary can be defended, but **the default
+deliverable is the decision summary + action email in
+`references/output-email.md`**; produce this full report only when the user
+asks for the scorecard or is reviewing the methodology itself.
+
+When producing it, use this structure exactly. The verdict leads — a reader
+in a hurry gets the answer, the confidence, and the one thing that matters
+most within the first three lines. Never delete a section: when one is
+empty, write "none found" in it, so absence reads as checked-and-clear
+instead of unchecked.
 
 **The report is an internal document.** Comp figures, red flags, competing
 processes, and the verdict rationale are for the user and their team — not

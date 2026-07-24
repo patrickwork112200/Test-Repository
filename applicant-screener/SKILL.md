@@ -304,14 +304,24 @@ Rules of application:
   they choose, but a screen that flatters on request protects no one,
   including them.
 
-## Step 7 — Report
+## Step 7 — Deliverable
 
-Produce the report using the exact template in
-`references/report-template.md`. The template leads with the verdict — the
-user should get the answer in the first three lines, then the evidence. Where
-the screen surfaced unknowns, the report's **Probe questions** section turns
-them into a ready-to-use screening-call script; pull question phrasings from
-`references/screening-questions.md` when useful.
+Run the full machinery — matrix, gates, scores, comp, rate, flags — but do
+not dump it on the user. The default deliverable, per
+`references/output-email.md`, is two things: a **decision summary** (the
+verdict in plain language, the decisive evidence, the money line, the
+confidence line — readable in fifteen seconds) and an **action email** in
+the user's own voice, matched to the verdict tier (endorsement note,
+CV-rework request, pass-and-redirect, or questions-to-forward). The full
+report in `references/report-template.md` is the internal working artifact
+and audit trail: build it, keep every summary sentence traceable to it, and
+produce it only on request. The verdict, the conditions, and the
+required-bill one-liner survive into every output format — those are the
+non-negotiable core.
+
+Where the screen surfaced unknowns, turn them into the ready-to-use
+screening-call probes (in the email or summary as fits); pull question
+phrasings from `references/screening-questions.md` when useful.
 
 After the report is delivered: if the screen surfaced panel feedback,
 rejection reasons, or client logistics not yet recorded in
@@ -357,5 +367,6 @@ recommending which role (if any) to put the candidate forward for.
 | `references/client-profiles.md` | Steps 1, 4, 7 | Per-client memory: panel patterns, prior rejection reasons, location/setup defaults, TCV duration defaults — seeded, maintained by Step 7 |
 | `references/red-flags.md` | Steps 5, 5b | Flag catalog with severities, fraud/authenticity signals, technology-age checks, document hygiene table, probe conversions |
 | `references/screening-questions.md` | Step 7 | Question bank: comp/logistics, motivation, skill-depth, tenure/gap, authenticity, behavioral |
-| `references/report-template.md` | Step 7 | The exact output template, single and batch, including the rate block |
+| `references/output-email.md` | Step 7 | The default deliverable: decision summary + action email patterns, persona guide |
+| `references/report-template.md` | Step 7 | The full internal report (audit trail; produced on request), single and batch, including the rate block |
 | `scripts/rate_math.py` | Step 4 | Deterministic cost / GPM / required-bill arithmetic (snapshot conventions; live workbook wins) |
