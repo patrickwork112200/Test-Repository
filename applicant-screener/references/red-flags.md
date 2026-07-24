@@ -42,6 +42,8 @@ that's the probe.
 | Title inflation vs. described work (Director doing IC tasks) | Concern | Probe scope: team size, budget, decisions owned |
 | Buzzword-dense, generic, template-uniform text (increasingly: AI-boilerplate CVs — flawless generic prose, no specifics that could only come from having been there) | Note→Concern | Depth-probe any core skill: specifics collapse fast if the CV is hollow |
 | Skills section contradicts experience section (expert-listed skill appearing in no role) | Concern | "Where did you last use X in production?" |
+| Summary/profile claims a tool or tenure that appears in zero role descriptions (see the scoring rubric's summary cross-check) | Concern | "Which role was that in — what did you build with [tool] there?" |
+| Claimed years with a named technology exceeding the technology's age ("15 years of Medallion Architecture" — the term dates to ~2019–2020) | Concern | "When did you first use [tech], and what were you using before it?" Cheap and objective: check the release date of any technology, cloud service, framework, or certification whose claimed tenure looks long — this catches inflation the other checks miss |
 
 ## Consistency & fraud signals
 
@@ -75,6 +77,15 @@ Verification recommendations belong in the report's conditions when concerns
 cluster: reference checks on specific claims, certification lookups (most
 major issuers have public verification portals), sequential-interviewer
 identity confirmation for remote candidates.
+
+## Document hygiene flags (Step 5b findings)
+
+| Finding | Default severity |
+|---|---|
+| File metadata (author / last-modified-by / company / template) names a third party — prior vendor, recruiter, colleague | Concern; **Critical** if it indicates the document was authored wholesale by someone other than the candidate |
+| Another client's confidentiality classification or branding in headers/footers/watermarks | Concern for the screen — but the *forwarding exposure* is flagged to the user immediately and unconditionally, independent of verdict: this CV must not go to another client as-is |
+| Unfilled template placeholders, boilerplate left standing | Note→Concern (care quality; consistent with a template/mass-produced CV) |
+| Spelling/grammar defects | Note — scores into the communication criterion only when the JD names written communication as a requirement |
 
 ## What is NOT a red flag
 

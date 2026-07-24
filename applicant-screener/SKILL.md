@@ -80,6 +80,16 @@ Collect what you have and name what you don't. Required inputs:
 - **Other requirements**: anything the user stated beyond the JD — client
   preferences, start-date deadline, work authorization, background-check
   needs, specific tools or clearances.
+- **Prior-candidate feedback**: panel or client feedback on candidates
+  previously rejected or advanced for *this same requisition*. In live use
+  this is routinely the single most decision-relevant input, and it rarely
+  arrives labelled — it gets pasted at the top of the JD file, buried in an
+  email thread, or mentioned in passing. Scan every supplied material for it
+  before concluding there is none.
+- **Engagement shape** (for the rate analysis): Staff Aug vs. Managed
+  Capacity vs. Managed Services, and internal employee vs. vendor/contractor.
+  If the materials don't say, ask — these two facts move the rate math more
+  than the market band's own error bars.
 
 If something material is missing, do not stall the whole screen: run every
 step the inputs support, then let the Verdict step decide whether the holes are
@@ -111,6 +121,17 @@ closely at the candidate**:
 3. **Define what "strong" looks like per criterion** — one line each — so the
    scoring anchors in `references/scoring-rubric.md` have something concrete
    to bite on.
+4. **Fold in the client profile and prior-candidate feedback.** When the
+   client is identifiable from the JD, read `references/client-profiles.md`
+   and seed weights, probes, and rate-analysis defaults from its entry. Then
+   apply any panel/interview feedback on earlier candidates for this
+   requisition: feedback is *revealed* requirements, and where it conflicts
+   with or is narrower than the JD's wording, the panel's demonstrated
+   behaviour outranks the JD text. Raise the weight of any criterion the
+   panel demonstrably tested, state the deviation, and name the JD line you
+   downgraded as an inflated want. One boundary: a *stored* client profile
+   seeds weights and probes — it never overrides evidence in the current
+   materials; only feedback tied to this requisition can rewrite the matrix.
 
 Show the matrix in the report so the user can challenge the weights.
 
@@ -182,6 +203,27 @@ classification thresholds; the outcome is one of **Within / Stretch / Breach /
 Unassessed**. Breach gates the verdict, Stretch conditions it, Unassessed
 caps it at Endorse with Conditions.
 
+Then produce the **pay rate & bill rate analysis** — every single-candidate
+screen gets one, whether or not the user supplied a budget; it is most
+valuable precisely when they didn't, which is most screens. Resolve the
+engagement shape first (from intake, or ask): Staff Aug is the default
+calculator for a single-candidate screen; a seat inside a Managed
+Capacity/Services deal still gets priced, with a note that deal-level margin
+is set elsewhere; internal-employee vs. vendor changes the cost stack by more
+than the market band's error bars. Follow the "Pay rate & bill rate
+analysis" section of `references/compensation.md` for the market-band
+sourcing discipline (live search every run, cited and dated, ESTIMATE —
+VERIFY), the cost model (live workbook first, bundled snapshot as fallback —
+`scripts/rate_math.py` does the arithmetic), the required-bill math at the
+target and floor GPM, indicative TCV, and the priceability verdict with its
+lever ranking. Two guardrails travel with it everywhere: an estimated market
+band never drives a Breach classification or a Do Not Endorse on its own
+(only the candidate's actual stated expectation against a user-supplied
+ceiling can — a band-only comp picture stays Unassessed, with the band as
+labelled planning context), and a known expectation sitting well above the
+band is a negotiation datapoint with the gap in pesos and percent, not a fit
+judgment.
+
 ## Step 5 — Risk & red-flag review
 
 Read `references/red-flags.md` and sweep the materials for tenure patterns,
@@ -191,6 +233,33 @@ seriously). For each flag found, record: the flag, severity
 (note / concern / critical), and the probe question that would resolve it.
 Flags become interview probes in the report; only *critical, evidence-backed*
 flags (confirmed fabrication, impostor signals) escalate to a gate failure.
+
+## Step 5b — Document hygiene & third-party data leakage
+
+Treat the CV as a *document*, not only as content — file forensics regularly
+produce the most actionable finding of a screen. Check what the materials
+allow:
+
+- **File properties** (when the original file is available): author,
+  last-modified-by, company, template name. A prior vendor's, a recruiter's,
+  or a colleague's identity in the metadata is a finding.
+- **Headers, footers, watermarks**: another client's confidentiality
+  classification, a predecessor entity's branding, third-party contact
+  details.
+- **Unfilled template placeholders** ("[insert metric]", boilerplate left
+  standing).
+- **Spelling and grammar** — scored into the communication criterion only
+  when the JD names written communication as a requirement; otherwise noted,
+  never scored.
+
+State confidentiality exposure plainly and separately from fit: a CV carrying
+one client's internal classification marking must not be forwarded to
+another client as-is — that is a live exposure for the user *independent of
+the candidate's fit*, and the report's Risks section says so in those terms,
+first. Hygiene findings otherwise carry severities per
+`references/red-flags.md` (document hygiene table); they cap nothing by
+themselves unless they rise to integrity level — e.g. metadata indicating
+the document was authored wholesale by someone other than the candidate.
 
 ## Step 6 — Verdict
 
@@ -215,6 +284,17 @@ Rules of application:
   ₱X basic — recruiter, before submittal").
 - Borderline calls get a confidence note: what single piece of information
   would most change this verdict?
+- **Robustness statement.** The sensitivity line covers unknowns; generalize
+  it to scoring noise: state how many criteria would have to move up a full
+  point to change the verdict tier ("raising the two weakest criteria a
+  point each still lands at 57%, below the 60% threshold"). A negative
+  verdict that survives its own noise is one a delivery manager will accept;
+  one that flips on a single point is a borderline call — label it as such.
+- **Redirect on role-fit rejections.** When Do Not Endorse is driven by role
+  fit rather than a gate failure or an integrity problem, name the role
+  profile the evidence *does* support and recommend screening the candidate
+  against it — the one-candidate-many-roles pattern in Batch mode is the
+  mechanism. A wrong-role candidate is pipeline, not waste.
 - **User overrides.** The constraints belong to the user: if they waive their
   own budget, deadline, or a stated dealbreaker ("ignore the budget for this
   one"), re-screen with the waiver applied and record it in the report so the
@@ -232,6 +312,12 @@ user should get the answer in the first three lines, then the evidence. Where
 the screen surfaced unknowns, the report's **Probe questions** section turns
 them into a ready-to-use screening-call script; pull question phrasings from
 `references/screening-questions.md` when useful.
+
+After the report is delivered: if the screen surfaced panel feedback,
+rejection reasons, or client logistics not yet recorded in
+`references/client-profiles.md`, append them (dated) to that client's entry
+so the knowledge compounds — the next screen for that client starts from
+what this one learned.
 
 ## Batch mode — multiple candidates, one role
 
@@ -254,6 +340,10 @@ strengths, top two concerns, the 2–3 probes that matter) — full reports only
 for the candidates you're recommending advance, or on request. The scoring
 rigor never shrinks with the batch; only the prose does.
 
+Rate analysis in batch mode: produce **one rate block for the role**, not one
+per candidate, plus a one-line entry per candidate placing their expectation
+(where known) in the market band.
+
 The reverse case — one candidate against several roles — works the same way
 mirrored: one matrix per role, full screen per role, then a table of verdicts
 recommending which role (if any) to put the candidate forward for.
@@ -262,8 +352,10 @@ recommending which role (if any) to put the candidate forward for.
 
 | File | Read at | Contents |
 |---|---|---|
-| `references/scoring-rubric.md` | Step 3 | 0–5 anchors, per-criterion-type guidance, calibration traps |
-| `references/compensation.md` | Step 4 | Budget math, package normalization, notice-period economics, Philippines annex |
-| `references/red-flags.md` | Step 5 | Flag catalog with severities, fraud/authenticity signals, probe conversions |
-| `references/screening-questions.md` | Step 7 | Question bank: comp/logistics, skill-depth, tenure/gap, authenticity, behavioral |
-| `references/report-template.md` | Step 7 | The exact output template, single and batch |
+| `references/scoring-rubric.md` | Step 3 | 0–5 anchors, per-criterion-type guidance, summary-vs-role-bullet cross-check, calibration traps |
+| `references/compensation.md` | Step 4 | Budget math, package normalization, notice-period economics, Philippines annex, pay rate & bill rate analysis (market band, cost model, GPM math, levers) |
+| `references/client-profiles.md` | Steps 1, 4, 7 | Per-client memory: panel patterns, prior rejection reasons, location/setup defaults, TCV duration defaults — seeded, maintained by Step 7 |
+| `references/red-flags.md` | Steps 5, 5b | Flag catalog with severities, fraud/authenticity signals, technology-age checks, document hygiene table, probe conversions |
+| `references/screening-questions.md` | Step 7 | Question bank: comp/logistics, motivation, skill-depth, tenure/gap, authenticity, behavioral |
+| `references/report-template.md` | Step 7 | The exact output template, single and batch, including the rate block |
+| `scripts/rate_math.py` | Step 4 | Deterministic cost / GPM / required-bill arithmetic (snapshot conventions; live workbook wins) |

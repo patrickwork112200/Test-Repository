@@ -25,12 +25,28 @@ work) can reach 3, never higher. Only demonstrated evidence supports 4–5.
 **Unknown ≠ 0.** Score 0 only when the materials affirmatively show absence.
 When the materials are simply silent, mark the criterion **U (unknown)**,
 exclude it from the weighted total, report the total both ways ("72% scored /
-64% if unknowns score 2"), and add a probe question. This stops silence from
+64% if unknowns score 2"), and add a probe question. One narrowing of this
+rule: when a CV *exhaustively enumerates* its tooling — long lists reaching
+into niche or legacy products — the omission of a required, named tool is
+weak negative evidence, not silence. The test: would a candidate who had
+this tool have listed it, given what else they listed? If yes, score 1, not
+U, and say in the evidence cell that the score rests on a conspicuous
+omission. This stops silence from
 being punished like failure — but also stops it from being invisibly forgiven:
 an unknown on a **must-have** caps the verdict at Endorse with Conditions no
 matter the total, and unknowns aggregate under the SKILL.md verdict rule (two
 or more material unknowns whose answers would flip the verdict force
 Insufficient Information).
+
+**Where evidence lives in a CV.** Role-narrative bullets are *evidence*;
+summary/profile blocks and skills matrices are *claims* — inflation
+concentrates in the summary, because it is the one section nobody expects to
+defend line-by-line. Run one mechanical cross-check before scoring: every
+tool or skill named in the summary must trace to the role bullet where it
+was used. A summary claim appearing in zero role descriptions caps that
+criterion at 1 and becomes a named red flag (e.g. summary says "5 years
+hands-on Azure Databricks"; Databricks appears in none of 22 role
+descriptions — that exact pattern has decided live screens).
 
 ## Scoring by criterion type
 
@@ -106,6 +122,14 @@ pattern shows a real logistics or commitment risk.
   flagged the years as a hard client requirement.
 - **Same-rubric discipline (batch mode)** — never adjust an anchor because of
   who else is in the pool. The pool changes; the standard doesn't.
+- **Correlated criteria** — before totalling, check whether two criteria are
+  being driven by the same underlying fact (e.g. "stopped hands-on work in
+  2019" surfacing once as a recency discount inside core skills and again as
+  a seniority/scope mismatch). Counting one fact twice manufactures
+  certainty the evidence doesn't contain. Disclose the correlation in the
+  report and show the weighted total with the correlated criteria collapsed
+  into one; if the verdict tier changes under the collapse, the verdict
+  isn't robust and must say so.
 
 ## Computing the total
 
