@@ -39,12 +39,21 @@ scorecard, it doesn't go in the summary.
 
 Write it ready-to-send in the user's voice, chosen by verdict tier:
 
-| Verdict | Email | To |
+| Verdict / situation | Email | To |
 |---|---|---|
 | Endorse | Endorsement note — who, role, the 2–3 selling points, comp/availability line, next step | Delivery / account team |
-| Endorse w/ conditions · DNE-but-remediable | **CV-rework request** (the workhorse — full pattern below) | Sourcing / delivery team |
+| Close, but the evidence isn't *shown* | **CV-rework request** (pattern A below) | Sourcing / delivery team |
+| Gaps on *core requirements* — fit itself in doubt | **Requirement-checklist, confirm-or-replace** (pattern B below) | Sourcing / delivery team |
 | Do Not Endorse (final) | Short pass note + redirect: the role profile the candidate does fit | Whoever owns the pipeline |
 | Insufficient Information | The exact questions, phrased to forward to whoever can answer | Recruiter / candidate |
+
+Choosing between A and B: pattern A when the screen suggests the experience
+probably exists but isn't evidenced (summary claims with no role backing,
+panel feedback saying "show it"); pattern B when the CV affirmatively shows
+*different* experience than the requirement (React Native when the req is
+React web; MySQL/Mongo when the req is Postgres/Vector DB). A asks the team
+to surface what's there; B asks them to confirm it exists at all — or
+replace the candidate.
 
 ### Voice and persona
 
@@ -62,7 +71,41 @@ AI-speak:
 - Ends with the personal ask and the real stakes, one or two sentences.
 - No corporate filler, no hedging, no exclamation marks, no bullet soup.
 
-### The CV-rework email pattern
+### Pattern B — the requirement-checklist email (confirm-or-replace)
+
+For core-requirement gaps. The email is the must-have matrix rendered in
+plain words — every line traces to the internal scorecard:
+
+1. **Opening = thanks + verdict**, two lines: "Thanks for sending
+   [Candidate]'s profile. On review I won't be able to endorse him for
+   this requirement yet — the gaps are on the core requirements."
+2. **THE ROLE** — the requirement distilled to one or two lines, close to
+   the req's own wording. (ALL-CAPS section headers are part of the voice
+   here — they make the email scannable on a phone.)
+3. **HOW THE CV CHECKS OUT** — one line per core requirement:
+   **Yes / Partial / No**, with the evidence in the same breath ("React
+   UI — Partial. His work is React Native; all three projects on the CV
+   are mobile apps"). A "No" means checked-and-absent, not unchecked —
+   the exhaustive-enumeration rule from the scoring rubric is what lets
+   you say it flatly.
+4. **IF HE HAS MORE THAN THE CV SHOWS** — the verify-vs-add guardrail as
+   an ask: for each gap, an updated CV naming the project, what he built,
+   and roughly when. Never "add these keywords."
+5. **Additional requests** — the screen's flags as neutral asks:
+   unexplained recent gaps ("please clarify why there's nothing shown
+   from [month] to present"), summary-vs-role contradictions ("the
+   summary says he built backends with Node; the role bullet says he
+   collaborated with backend developers — please align it to whichever
+   is more accurate"). Neutral phrasing; the team resolves it, nobody
+   gets accused.
+6. **Close = the fork**, so the pipeline moves either way: "If he fits,
+   re-endorse with the updated CV. If not, I need [the replacement
+   profile as a one-line JD: stack + seniority + differentiator]" —
+   e.g. "a Python/Flask + React web full-stack engineer, preferably with
+   AI application experience." The sourcing spec comes straight from the
+   requirement matrix's unmet must-haves.
+
+### Pattern A — the CV-rework email
 
 1. **Subject line** that carries the verdict and the stakes: who, what's
    needed, why now.
@@ -87,7 +130,7 @@ AI-speak:
    a concrete offer that removes friction (e.g. "put me on a 30-minute
    call with the candidate; items 1–5 we can pull out of him directly").
 
-### Condensed exemplar (genericized)
+### Condensed exemplar — pattern A (genericized)
 
 > **Subject: [Candidate] — CV rework needed before [Client] endorsement
 > (same gaps that cost us [prior candidate])**
