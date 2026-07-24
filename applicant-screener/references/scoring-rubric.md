@@ -16,14 +16,21 @@ the evidence line that justifies the number.
 | **1** | Trace evidence only — the skill appears in a list or a one-line mention with nothing behind it | Claimed, uncorroborated |
 | **0** | No evidence at all, or evidence of the opposite | — |
 
+**Evidence class caps the score.** Purely *inferred* evidence — your
+deduction with nothing stated or shown — caps a criterion at 2, however
+plausible the inference; inference plus corroborating claimed activity (e.g.
+communication inferred from demonstrated review-leading and client-facing
+work) can reach 3, never higher. Only demonstrated evidence supports 4–5.
+
 **Unknown ≠ 0.** Score 0 only when the materials affirmatively show absence.
 When the materials are simply silent, mark the criterion **U (unknown)**,
 exclude it from the weighted total, report the total both ways ("72% scored /
 64% if unknowns score 2"), and add a probe question. This stops silence from
 being punished like failure — but also stops it from being invisibly forgiven:
 an unknown on a **must-have** caps the verdict at Endorse with Conditions no
-matter the total, and two or more must-have unknowns force Insufficient
-Information.
+matter the total, and unknowns aggregate under the SKILL.md verdict rule (two
+or more material unknowns whose answers would flip the verdict force
+Insufficient Information).
 
 ## Scoring by criterion type
 
@@ -40,8 +47,15 @@ tool lists are a mild negative one.
 
 **Recency discount.** A required skill last evidenced 3–5 years ago: cap at 3.
 More than 5 years ago: cap at 2. Note the discount in the evidence column so
-the user sees why. Exception: skills that don't rot (domain knowledge,
-regulatory expertise) — use judgment and say when you're not discounting.
+the user sees why. Two exceptions: skills that don't rot (domain knowledge,
+regulatory expertise) — use judgment and say when you're not discounting; and
+recency gaps caused by a career break (parental, medical, military, study)
+rather than by drift to other work — capping those mechanically converts the
+break into an across-the-board penalty, which is both unfair and in some
+cases unlawful. For returners, treat currency as a probe ("what have you
+used X for recently?"), count non-employment evidence of currency (courses,
+certifications, personal or open-source projects), and if you still discount,
+show the score both ways so the user sees what the cap is doing.
 
 **Domain / industry experience.** Weight actual immersion (years inside the
 domain, regulated-environment exposure, domain-specific systems) over incidental
@@ -67,7 +81,14 @@ common victim of halo effect.
 
 **Stability / logistics.** Tenure pattern (see red-flags reference for what
 counts as a flag vs. market-normal), availability, notice period, location
-logistics. This criterion scores the *pattern*, not any single event.
+logistics. This criterion scores the *pattern*, not any single event — and it
+scores only what is *explained*. An unexplained gap or a current spell of
+unemployment is an unknown, not a demerit: flag it, probe it, and score the
+criterion on the evidence that exists (or U if the pattern is mostly
+unknowns). Penalizing silence here disproportionately hits people whose gaps
+have protected causes — illness, caregiving, layoffs — which is exactly the
+bias a rubric exists to prevent. The score drops only when the *explained*
+pattern shows a real logistics or commitment risk.
 
 ## Calibration traps
 

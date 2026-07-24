@@ -4,8 +4,15 @@ Use these when converting unknowns and flags into the report's **Probe
 questions** section. Pick and adapt — a good probe list is 6–10 questions
 targeted at *this* candidate's specific unknowns, not a generic script. Order
 them: knockouts first (cheapest to resolve, ends the call early if failed),
-then comp/logistics, then skill depth, then flags — behavioral last, they take
-the longest.
+then comp/logistics, then motivation, then skill depth, then flags —
+behavioral last, they take the longest.
+
+If an answer discloses protected information (health, family status,
+religion, and the rest of the SKILL.md list), acknowledge briefly, steer back
+to the job-relevant part of the question, exclude the disclosure from the
+evaluation, and do not record it in notes or the report. What *is* usable is
+the job-relevant residue: "available from March" is usable; why they are
+available from March is not.
 
 ## Knockout & logistics (first 5 minutes)
 
@@ -16,8 +23,6 @@ the longest.
   and is it sustainable for you?"
 - "What's your notice period, and is any of it negotiable or buyout-able?
   When could you realistically start?"
-- "Are you interviewing elsewhere? Any offers in hand or expected soon?"
-  (pipeline-risk, not pressure)
 
 ## Compensation (early, matter-of-fact)
 
@@ -32,6 +37,30 @@ the longest.
   current package include — allowances, bonus, HMO/benefits?"
 - "How firm is that number — is there a range you'd consider for the right
   role?"
+
+## Motivation & acceptance risk
+
+The screen isn't only "can they do it" — it's "will they accept, join, and
+stay long enough to matter." An endorsed candidate who declines the offer
+costs the user a client-facing miss; probe this dimension whenever motivation
+data didn't arrive with the materials:
+
+- "What's prompting the move from [current company]?" — listen for pull
+  ("this role offers X") vs. pure push ("anywhere but here"); push-only
+  motivation raises counteroffer and early-attrition risk.
+- "What specifically interests you about this role/client?" — a candidate
+  who can't answer is applying everywhere; note it as acceptance risk, not
+  as a score.
+- "Are you interviewing elsewhere? Any offers in hand or expected soon?" —
+  pipeline risk shapes how fast the user must move.
+- "If your current employer counters with more money, what happens?" — asked
+  matter-of-factly; hesitation is information.
+- "What would make you turn this offer down?" — surfaces the real
+  dealbreaker (shift, commute, title) while it can still be addressed.
+
+Findings land in the report's Risks section as acceptance/pipeline risk with
+a recommended response (expedite the loop, pre-close on comp, address the
+stated dealbreaker) — they modify urgency and conditions, not the score.
 
 ## Skill-depth probes
 

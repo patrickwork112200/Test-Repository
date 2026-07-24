@@ -2,35 +2,57 @@
 
 Budget misalignment is the most common late-stage deal-killer, and the most
 preventable — surface it at screening, in numbers, every time. The output of
-this step is a comp table plus a classification: **Within / Stretch / Breach**.
+this step is a comp table plus a classification: **Within / Stretch / Breach /
+Unassessed**.
+
+## Anchor on expected comp, not salary history
+
+The classification runs on **expected compensation vs. ceiling** — always
+lawful to ask, and the number the deal actually closes on. Current
+compensation is context, not the anchor: many jurisdictions (a growing list
+of US states and localities, and others) ban asking about salary history, and
+even where legal it imports pay inequities the ban laws exist to break.
+Rules:
+
+- Use current comp only when lawfully obtained — volunteered, in the
+  materials, or asked where permitted. Never make it a required input.
+- The increase-ask figure is an optional negotiation diagnostic computed only
+  when current comp is lawfully known; its absence never blocks the
+  classification.
+- Where salary history can't be asked, the equivalent probe is forward-only:
+  "what are you expecting?" plus, if useful, disclosing the budget.
 
 ## The numbers to establish
 
 | Figure | Notes |
 |---|---|
-| Current compensation | Basic pay vs. total package — never mix the two in a comparison |
-| Expected compensation | As stated; note whether it was framed as firm or negotiable |
+| Expected compensation | The anchor. As stated; note whether framed as firm or negotiable |
 | Budget range / ceiling | From the user. A single number = ceiling. Confirm basic vs. package basis |
-| Increase ask | (Expected − Current) ÷ Current, as % |
+| Current compensation | Only where lawfully known. Basic vs. package — never mix the two in a comparison |
+| Increase ask | (Expected − Current) ÷ Current, as % — optional, only when current is known |
 | Market context | Only if you know the market for the role and location; label it as your estimate, not data |
 
-If current or expected comp is missing, that's a probe question, not a guess —
-and without *expected* comp the budget classification is **Unassessed**, which
-the verdict must acknowledge (usually as a condition: "confirm expected comp ≤
-ceiling").
+If expected comp is missing, that's a probe question, not a guess — the
+classification is **Unassessed**, which caps the verdict at Endorse with
+Conditions with "confirm expected comp ≤ ceiling" as the condition (per the
+SKILL.md verdict rules; it escalates to Insufficient Information only when it
+is one of two or more material unknowns).
 
 ## Classification
 
+Classify on the number first; firmness modifies:
+
 - **Within budget** — expected ≤ ceiling on a like-for-like basis.
-- **Stretch** — expected exceeds ceiling by ≤10% *and* there's a negotiability
-  signal (stated flexibility, a range rather than a number, a large increase
-  ask that suggests an opening position). Stretch never blocks endorsement by
-  itself; it becomes an explicit condition ("negotiate to ≤ ceiling; candidate
-  asking +8% over").
+- **Stretch** — expected exceeds ceiling by ≤10%. Default classification for
+  this zone even when negotiability is unstated — willingness to move is the
+  probe, not a precondition ("negotiate to ≤ ceiling; candidate asking +8%
+  over; flexibility unconfirmed"). Exception: an expectation *stated as firm*
+  above the ceiling is Breach at any overage. Stretch never blocks
+  endorsement by itself; it becomes an explicit condition.
 - **Breach** — expected exceeds ceiling by >10%, or exceeds it at all with a
   stated-firm expectation. Breach gates the verdict at Do Not Endorse *unless*
-  the user has signaled the budget itself is soft — then present it as their
-  call with the exact overage.
+  the user explicitly waives or softens the budget — then re-screen with the
+  waiver recorded and present the exact overage as their call.
 
 The 10% line is a default; if the user or client has stated their own
 tolerance, that wins.
@@ -42,8 +64,15 @@ tolerance, that wins.
   classifying: basic, guaranteed allowances, variable pay, benefits with cash
   value.
 - **Rate types.** Contractor day/hourly rates vs. FTE salary are not
-  comparable without conversion; convert on working days/hours and note that
-  contractor rates price in benefits the FTE package carries separately.
+  comparable without conversion. Pin the conventions and state them in the
+  table: monthly ↔ hourly via ~22 working days × 8 hours (≈176 hrs/month)
+  unless the contract says otherwise; contractor all-in rates price in
+  benefits, leave, and statutory items an FTE package carries separately —
+  a rough 1.2–1.4× loading on FTE basic is the comparison heuristic, labeled
+  as such. When the classification lands within ~3 percentage points of the
+  10% Stretch/Breach line *because of* a conversion convention, say so and
+  show the classification under both conventions rather than letting an
+  assumption silently pick the verdict.
 - **Currency.** Normalize to the budget's currency at an approximate current
   rate and say which rate you assumed.
 - **Annualized vs. monthly.** Some markets quote monthly (often ×13 or ×14 to
@@ -96,8 +125,8 @@ the like-for-like math:
 
 | Item | Candidate | Budget/Target | Basis |
 |---|---|---|---|
-| Current comp | | — | basic/package, currency, monthly/annual |
-| Expected comp | | ceiling | like-for-like basis after normalization |
-| Increase ask | X% | — | |
-| Classification | **Within / Stretch / Breach / Unassessed** | | one-line justification |
+| Expected comp | | ceiling | like-for-like basis after normalization; conversion conventions stated |
+| Current comp | where lawfully known, else "not collected" | — | basic/package, currency, monthly/annual |
+| Increase ask | X% (only when current known) | — | |
+| Classification | **Within / Stretch / Breach / Unassessed** | | one-line justification; note if conversion-sensitive near the 10% line |
 | Notice / availability | | deadline if any | conflict yes/no |

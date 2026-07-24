@@ -23,7 +23,7 @@ parts: *what you saw*, *severity*, *the question that resolves it*.
 | Pattern | Default severity | Probe |
 |---|---|---|
 | 3+ consecutive stints under ~18 months (excluding contracts/layoffs, which are market-normal) | Concern | "Walk me through the moves — what prompted each?" Listen for pattern of blame vs. circumstance |
-| Unexplained gap > 6 months | Concern | "What were you doing between X and Y?" Many answers are benign (care, study, visa, market); it's the *unexplained* that's the flag |
+| Unexplained gap > 6 months | Concern | "What were you doing between X and Y?" Many answers are benign (care, study, visa, market); it's the *unexplained* that's the flag. A flag here is a probe only — per the scoring rubric, an unexplained gap never lowers a score before it's been asked about |
 | Gap filled with vague "consulting/freelancing" and no clients or outputs | Concern | "Which clients or projects? What did you deliver?" |
 | Seniority regression (title/scope moving down without stated reason) | Note→Concern | "What drew you to a smaller-scope role?" |
 | Sideways drift — same role, same level, 10+ years, applying to a step-up | Note | Probe for growth evidence; not disqualifying |
@@ -58,7 +58,18 @@ ascending severity:
 | Credentials from unverifiable institutions / known diploma mills; certs that can't be looked up | Concern→Critical once checked and failed |
 | Employer that can't be found *and* can't be explained (genuinely small/renamed firms exist — probe first) | Concern→Critical |
 | Confirmed misrepresentation: dates, degree, cert, or role verifiably false | **Critical** |
-| Interview-stage impostor indicators (voice/appearance mismatch across calls, answers read aloud, refusal of camera without cause) | **Critical** — recommend identity re-verification |
+| Interview-stage impostor indicators (identity mismatch across calls, answers being fed or read) | **Critical** — recommend identity re-verification |
+
+One carve-out on impostor signals, because they overlap with protected and
+benign traits: camera reluctance, halting or accented speech, long answer
+latency, and unusual eye movement all have innocent explanations —
+disability, assistive technology, religious dress concerns, poor
+connectivity, interviewing in a second language. None of these is a fraud
+signal on its own. Treat them as prompts for a *neutral* identity check
+(consistent identity across rounds, an unscripted follow-up), never as the
+finding itself, and never name them in the report as suspicion — report only
+concrete inconsistencies (different person across calls, answers that
+contradict the CV, verification failures).
 
 Verification recommendations belong in the report's conditions when concerns
 cluster: reference checks on specific claims, certification lookups (most
