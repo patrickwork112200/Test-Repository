@@ -66,8 +66,23 @@ It is a **capability layer**: it does *selection, installation, health-checking,
 2. **Research method:** for broad research, adopt the multi-platform standing rule even without the tool — semantic web search + platform-native discussion sources in parallel, then synthesize; treat "exit 0 but empty content" as failure; follow an explicit ordered retry chain instead of guessing commands.
 3. **Skill authoring:** reuse the design patterns above when building or improving Patrick's skills.
 
+## Verification run — 2026-08-13, this cloud session
+
+The analysis was verified by actually installing and exercising the tool (not just reading it):
+
+- `pip install` from the cloned source succeeded (the GitHub archive-zip route is blocked by the cloud proxy — **in cloud sessions, clone the repo and install from the local path**). `agent-reach --version` → v1.5.0.
+- `agent-reach doctor --json` ran clean and reported per-channel status + `active_backend` exactly as documented. In this container: **web (Jina Reader), V2EX, RSS, and Bilibili search API came up OK with zero config**; YouTube/GitHub/Xueqiu showed `warn` (missing system deps — gh CLI, JS runtime — which the safe-by-default install correctly refuses to add without `--system`); Exa showed `off` (mcporter not installed); all login-backed channels `off`, as expected with no Chrome session.
+- Real-content checks per the skill's own success criterion (non-empty content, not exit code): Jina Reader returned clean markdown for a live page; the V2EX hot-topics API returned 10 real topics.
+
+Conclusion: the cloud-session claim in this document is **confirmed** — zero-config reading works per-session; login-backed channels remain desktop-only.
+
+## Decisions — made 2026-08-13 under Patrick's explicit delegation ("Decide for me end-to-end")
+
+1. **Adopted as working practice:** the internet-reach routing rule (PROPOSED #1 above) and the research-method rule (PROPOSED #2) are adopted as the working default going forward. Formal binding still happens through the normal sync/PC-master path; this records the decision and its provenance (Patrick's delegation, user turn, 2026-08-13).
+2. **LinkedIn channel: NO.** Not enabled, not to be enabled by default. It automates a personal LinkedIn session, and Patrick's LinkedIn account is a core professional asset in his recruitment work — account-restriction risk outweighs sourcing convenience. Revisit only if Patrick explicitly asks, and then only with a dedicated account.
+3. **PC install: optional, left to Patrick.** Not executable from a cloud session. When he wants the login-backed channels (Twitter, Reddit, XHS, Facebook, Instagram), the one-liner to paste to any agent on his PC is: `帮我安装 Agent Reach：https://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/install.md` — safe-by-default; approve `--system` only when asked.
+4. **Cloud sessions:** install per-session from a local clone when a task needs it (verified working this session).
+
 ## Open items
 
-- Agent Reach was **analyzed, not installed**. Installing on the PC (where login-backed channels actually work) is Patrick's call.
-- Whether to ever enable the LinkedIn channel for sourcing (ToS/account risk) — Patrick's call.
-- Unabyss mirror of this lesson: attempted this session during the known Unabyss outage window (trial/quota issue captured 2026-08-12); see the run report in the conversation for whether it landed.
+- Unabyss mirror of this lesson: attempted repeatedly during the known Unabyss outage window (trial/quota issue captured 2026-08-12); the Notion capture rows are the canonical record until Unabyss recovers.
